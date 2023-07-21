@@ -1,0 +1,20 @@
+{
+    "data": {
+      "register": {
+        "id": "64ba69ca2be9c129c2edb0f5",
+        "username": "doom",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YmE2OWNhMmJlOWMxMjljMmVkYjBmNSIsImVtYWlsIjoiZHVtbXlAeWFoby5jb20iLCJ1c2VybmFtZSI6ImRvb20iLCJpYXQiOjE2ODk5MzgzNzgsImV4cCI6MTY4OTk0MTk3OH0.wIUnld9_FTTsgz42lFoUn_NDjtdv4tFwiD8t9AUrAW8",
+        "createdAt": "2023-07-21T11:19:38.975Z"
+      }
+    }
+  }
+{
+  "data": {
+    "register": {
+      "id": "64ba69e063e575a7451a9ace",
+      "username": "angel",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YmE2OWUwNjNlNTc1YTc0NTFhOWFjZSIsImVtYWlsIjoiZHVtbXlAeWFoby5jb20iLCJ1c2VybmFtZSI6ImFuZ2VsIiwiaWF0IjoxNjg5OTM4NDAwLCJleHAiOjE2ODk5NDIwMDB9.dLSfoQij2D59vsC_GfgghesHWtTq7sDeJPnaGTntzO0",
+      "createdAt": "2023-07-21T11:20:00.350Z"
+    }
+  }
+}

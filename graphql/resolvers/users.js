@@ -2,7 +2,7 @@ const bycrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 // const User = require("../../models/User");
 const User = require("../../models/User");
-const SECRET_KEY = require("../../config.js").SECRET_KEY;
+// const SECRET_KEY = require("../../config.js").SECRET_KEY;
 const { UserInputError } = require("apollo-server");
 const { validateRegisterInput } = require("../../util/validators");
 const { validateLoginInput } = require("../../util/validators");
@@ -71,7 +71,7 @@ module.exports = {
       }
 
       //hash password and create an auth token
-      console.log("SECRET_KEY:", SECRET_KEY);
+      console.log("SECRET_KEY:", "new_random_secret_key");
 
       password = await bycrypt.hash(password, 12);
       const newUser = new User({
