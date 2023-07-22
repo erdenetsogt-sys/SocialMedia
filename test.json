@@ -13,8 +13,19 @@
     "register": {
       "id": "64ba69e063e575a7451a9ace",
       "username": "angel",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YmE2OWUwNjNlNTc1YTc0NTFhOWFjZSIsImVtYWlsIjoiZHVtbXlAeWFoby5jb20iLCJ1c2VybmFtZSI6ImFuZ2VsIiwiaWF0IjoxNjg5OTM4NDAwLCJleHAiOjE2ODk5NDIwMDB9.dLSfoQij2D59vsC_GfgghesHWtTq7sDeJPnaGTntzO0",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YmE2OWUwNjNlNTc1YTc0NTFhOWFjZSIsImVtYWlsIjoiZHVtbXlAeWFoby5jb20iLCJ1c2VybmFtZSI6ImFuZ2VsIiwiaWF0IjoxNjg5OTg5OTk1LCJleHAiOjE2ODk5OTM1OTV9.hUXzfxciAGlIK2F9AjE-BNuKLJaR9y6HIOzeyV4Nz5U",
       "createdAt": "2023-07-21T11:20:00.350Z"
+    }
+  }
+}
+mutation comment{
+  createComment(postId:"64ba6a69c4e3015b9c8bafc5", body:"lucifer, fallen angel"){
+    id
+    body
+    comments{
+      id
+      createdAt
+      username
     }
   }
 }
