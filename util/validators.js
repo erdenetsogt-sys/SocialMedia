@@ -1,3 +1,4 @@
+// const { UserInputError } = require("apollo-server");
 module.exports.validateRegisterInput = (
   username,
   email,
@@ -22,6 +23,11 @@ module.exports.validateRegisterInput = (
   if (password !== confirmPassword) {
     errors.confirmPassword = "Passwords must match";
   }
+
+  // if (Object.keys(errors).length > 0) {
+  //   throw new UserInputError("Bad sssinput", { errors });
+  // }
+
   return {
     errors,
     valid: Object.keys(errors).length < 1,
