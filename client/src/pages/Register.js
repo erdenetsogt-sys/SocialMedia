@@ -2,14 +2,21 @@ import React, { useState } from "react";
 import { Form, Button } from "semantic-ui-react";
 import { useMutation } from "@apollo/react-hooks";
 import gql from "graphql-tag";
+// import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useForm } from "../util/hooks";
+
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
 />;
 
 function Register() {
+  // const history = useHistory();
+  const navigate = useNavigate();
   const [errors, setErrors] = useState({});
-  const [values, setValues] = useState({
+
+  const { onChange, onSubmit, values } = useForm(registerUser, {
     username: "",
     email: "",
     password: "",
@@ -17,9 +24,9 @@ function Register() {
   });
 
   const [addUser, { loading }] = useMutation(REGISTER_USER, {
-    update(proxy, result) {
-      console.log(result);
+    update(_, result) {
       setErrors({});
+      navigate("/");
     },
     onError(err) {
       // if (err.graphQLErrors[0]?.extensions?.exception?.errors) {
@@ -35,13 +42,9 @@ function Register() {
     variables: values,
   });
 
-  const onChange = (event) => {
-    setValues({ ...values, [event.target.name]: event.target.value });
-  };
-  const onSubmit = (event) => {
-    event.preventDefault();
+  function registerUser() {
     addUser();
-  };
+  }
 
   return (
     <div className="form-container">
@@ -52,6 +55,7 @@ function Register() {
           placeholder="Username..."
           name="username"
           type="text"
+          error={errors.username ? true : false}
           value={values.username}
           onChange={onChange}
         />
@@ -60,6 +64,7 @@ function Register() {
           placeholder="Email..."
           name="email"
           type="email"
+          error={errors.email ? true : false}
           value={values.email}
           onChange={onChange}
         />
@@ -68,6 +73,7 @@ function Register() {
           placeholder="Password..."
           name="password"
           type="password"
+          error={errors.password ? true : false}
           value={values.password}
           onChange={onChange}
         />
@@ -76,6 +82,7 @@ function Register() {
           placeholder="Confirm Password..."
           name="confirmPassword"
           type="password"
+          error={errors.confirmPassword ? true : false}
           value={values.confirmPassword}
           onChange={onChange}
         />
